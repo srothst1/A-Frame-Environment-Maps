@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <!-- sky1 script -->
+    <script>
+      AFRAME.registerComponent("sky1", {
+        init: function() {
+          var targetCube = new THREE.WebGLRenderTargetCube(512, 512);
+          var renderer = this.el.sceneEl.renderer;
+
+          this.el.addEventListener("model-loaded", e => {
+            let mesh = this.el.getObject3D("mesh");
+            
+            var texture = new THREE.TextureLoader().load(
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Goat_Peak%2C_Cascades.jpg/1920px-Goat_Peak%2C_Cascades.jpg",
+              function() {
+                var cubeTex = targetCube.fromEquirectangularTexture(renderer, texture);
+                mesh.traverse(function(el) {
+                  if (el.material) {
+                    el.material.envMap = cubeTex.texture;
+                    el.material.envMap.intensity = 3;
+                    el.material.needsUpdate = true;
+                  }
+                });
+                renderer.toneMapping = THREE.ACESFilmicToneMapping;
+                renderer.outputEncoding = THREE.sRGBEncoding;
+              }
+            );
+          });
+        }
+      });
+    </script>
+    <!-- https://github.com/n5ro/aframe-extras/blob/351608a7360bc61d0ddd917760834e0a7b43aae1/src/misc/README.md#cube-env-map -->
+    <script>
+    AFRAME.registerComponent('cube-env-map, {
+      schema: {
+        path: {default: ''},
+        extension: {default: 'jpg'},
+        format: {default: 'RGBFormat'},
+        enableBackground: {default: false}
+      },
+
+      init: function () {
+        const data = this.data;
+
+        this.texture = new THREE.CubeTextureLoader().load([
+          data.path + 'posx.' + data.extension, data.path + 'negx.' + data.extension,
+          data.path + 'posy.' + data.extension, data.path + 'negy.' + data.extension,
+          data.path + 'posz.' + data.extension, data.path + 'negz.' + data.extension
+        ]);
+        this.texture.format = THREE[data.format];
+
+        if (data.enableBackground) {
+          this.el.sceneEl.object3D.background = this.texture;
+        }
+
+        this.applyEnvMap();
+        this.el.addEventListener('object3dset', this.applyEnvMap.bind(this));
+      },
+
+      applyEnvMap: function () {
+        const mesh = this.el.getObject3D('mesh');
+        const envMap = this.texture;
+
+        if (!mesh) return;
+
+        mesh.traverse(function (node) {
+          if (node.material && 'envMap' in node.material) {
+            node.material.envMap = envMap;
+            node.material.needsUpdate = true;
+          }
+        });
+      }
+    });
+    </script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="suv" src="https://cdn.glitch.global/4029ac5e-a0b4-4991-b27c-4f8aa117994f/suv.glb?v=1641430067406"></a-asset-item>
+      </a-assets>
+      <a-entity gltf-model="#suv" position="-2.5 0 0"></a-entity>
+      <a-entity gltf-model="#suv" position="0 0 0" sky1></a-entity>
+      <a-entity gltf-model="#suv" position = "2.5 0 0"
+          cube-env-map="path: /Assets/
+                        extension: jpg;
+                        reflectivity: 0.5;
+                        materials: myPrimaryMaterial, myAccentMaterial;">
+      </a-entity>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
