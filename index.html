@@ -1,13 +1,13 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="./src/cube_env_map.js"></script>
-    <script src="./src/target_cube.js"></script>
+    <script src="./src/scripts/cube_env_map.js"></script>
+    <script src="./src/scripts/target_cube.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <a-asset-item id="suv" src="https://cdn.glitch.global/4029ac5e-a0b4-4991-b27c-4f8aa117994f/suv.glb?v=1641430067406"></a-asset-item>
+        <a-asset-item id="suv" src="./src/assets/suv.glb"></a-asset-item>
         <img id="sky" src="./skybox/equirectangular/sky.jpg">
       </a-assets>
       <a-sky src="#sky"></a-sky>
