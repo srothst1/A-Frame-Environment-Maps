@@ -1,8 +1,6 @@
 Use the command `http-server` to run this code
 
-![unknown](https://user-images.githubusercontent.com/39531367/148473033-a8d3be13-9ca3-466d-8642-a23e48165a03.png)
-
-![unknown](https://user-images.githubusercontent.com/39531367/148472706-d993ae09-6d13-47e1-8633-c8955619b7f4.png)
+![image](https://user-images.githubusercontent.com/39531367/148474263-db1e8dae-e7fd-4793-806c-eeaf3d9bb214.png)
 
 From left to right: no environment map, recursive method that iterates through all objects in the scene, three.js scene property that sets a global enviornment map that is applied to all objects.
 
