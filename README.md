@@ -11,3 +11,4 @@ Some resources that I used:
 - https://github.com/3DStreet/3dstreet/blob/main/assets/CGSkies_0343_doubled_2048.jpg
 - https://github.com/3DStreet/3dstreet/blob/main/index.html
 - https://github.com/3DStreet/3dstreet/tree/main/assets/images/skybox
+- https://aframe.io/docs/1.2.0/primitives/a-sky.html#attributes_theta_length
