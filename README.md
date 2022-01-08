@@ -12,3 +12,5 @@ Some resources that I used:
 - https://github.com/3DStreet/3dstreet/blob/main/index.html
 - https://github.com/3DStreet/3dstreet/tree/main/assets/images/skybox
 - https://aframe.io/docs/1.2.0/primitives/a-sky.html#attributes_theta_length
+- https://coeleveld.com/spherical-equirectangular-environment-textures-and-hdri/
+- https://aframe.io/docs/1.2.0/components/gltf-model.html
