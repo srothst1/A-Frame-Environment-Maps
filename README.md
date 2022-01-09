@@ -6,6 +6,12 @@ From left to right: no environment map, recursive method that iterates through a
 
 ![image](https://user-images.githubusercontent.com/39531367/148474358-4de8088b-0248-4551-861c-3abefb106e12.png)
 
+Some updates from the `hdri-tests` branch:
+
+![im2](https://user-images.githubusercontent.com/39531367/148667215-6b69ba27-f986-47ca-abab-2b914d560740.png)
+
+![im1 (2)](https://user-images.githubusercontent.com/39531367/148667217-a1f3916e-a9d4-4302-b192-9266afe8d9f2.png)
+
 Some resources that I used:
 - https://glitch.com/edit/#!/street-flyer
 - https://github.com/3DStreet/3dstreet/blob/main/assets/CGSkies_0343_doubled_2048.jpg
