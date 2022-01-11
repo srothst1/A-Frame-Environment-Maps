@@ -1,16 +1,10 @@
 Use the command `http-server` to run this code
 
-![image](https://user-images.githubusercontent.com/39531367/148474263-db1e8dae-e7fd-4793-806c-eeaf3d9bb214.png)
+![image](https://user-images.githubusercontent.com/39531367/148865543-b2090ce8-eea4-4e2d-814b-87250f982afe.png)
 
 From left to right: no environment map, recursive method that iterates through all objects in the scene, three.js scene property that sets a global enviornment map that is applied to all objects.
 
-![image](https://user-images.githubusercontent.com/39531367/148474358-4de8088b-0248-4551-861c-3abefb106e12.png)
-
-Some updates from the `hdri-tests` branch:
-
-![im2](https://user-images.githubusercontent.com/39531367/148667215-6b69ba27-f986-47ca-abab-2b914d560740.png)
-
-![im1 (2)](https://user-images.githubusercontent.com/39531367/148667217-a1f3916e-a9d4-4302-b192-9266afe8d9f2.png)
+![image](https://user-images.githubusercontent.com/39531367/148865560-26f8e4c4-cda2-4c8c-a589-fb8b36fc069e.png)
 
 Some resources that I used:
 - https://glitch.com/edit/#!/street-flyer
