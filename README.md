@@ -6,6 +6,10 @@ From left to right: no environment map, recursive method that iterates through a
 
 ![image](https://user-images.githubusercontent.com/39531367/148865560-26f8e4c4-cda2-4c8c-a589-fb8b36fc069e.png)
 
+Here is a close-up:
+
+![image](https://user-images.githubusercontent.com/39531367/148865758-b6555ff9-5e79-4954-a831-aadbf03e87ff.png)
+
 Some resources that I used:
 - https://glitch.com/edit/#!/street-flyer
 - https://github.com/3DStreet/3dstreet/blob/main/assets/CGSkies_0343_doubled_2048.jpg
