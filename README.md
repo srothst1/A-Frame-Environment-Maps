@@ -18,3 +18,4 @@ Some resources that I used:
 - https://aframe.io/docs/1.2.0/primitives/a-sky.html#attributes_theta_length
 - https://coeleveld.com/spherical-equirectangular-environment-textures-and-hdri/
 - https://aframe.io/docs/1.2.0/components/gltf-model.html
+- I'm not sure if there is a simple way to load an HDR file into three.js. It seems like you need to use a RGBELoader. https://discourse.threejs.org/t/hdri-background-position/13602/5
