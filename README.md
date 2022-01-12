@@ -19,3 +19,6 @@ Some resources that I used:
 - https://coeleveld.com/spherical-equirectangular-environment-textures-and-hdri/
 - https://aframe.io/docs/1.2.0/components/gltf-model.html
 - I'm not sure if there is a simple way to load an HDR file into three.js. It seems like you need to use a RGBELoader. https://discourse.threejs.org/t/hdri-background-position/13602/5
+- https://threejs.org/docs/index.html#api/en/loaders/CubeTextureLoader
+- https://discourse.threejs.org/t/hdri-background-position/13602/5
+- https://github.com/mrdoob/three.js/blob/master/examples/jsm/loaders/RGBELoader.js
